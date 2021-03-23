@@ -1,0 +1,46 @@
+.container{
+    border: 1px solid #817979;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 8px 30px 30px;
+    text-align: center;
+}
+.search_container{
+    display: flex;
+    justify-content: space-between;
+}
+.heading_first{
+    font-weight: 500;
+}
+.input_search {
+
+}
+.input_search input{
+    height: 35px;
+    width: 200px;
+    padding: 0px 8px;
+}
+.input_search button {
+    height: 35px;
+    margin-left: 10px;
+    width: 90px;
+    font-weight: 500;
+   font-size: 16px;
+
+}
+.today_pic{
+    height: 360px;
+    border: 1px solid #817979;
+    margin: 20px 0px;
+}
+.today_pic img {
+    height: 100%;
+    width: 100%;
+}
+.hompage_bottom{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}

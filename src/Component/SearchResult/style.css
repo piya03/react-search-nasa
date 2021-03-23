@@ -1,0 +1,51 @@
+.thumbnail_container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.thumbnail_img img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+  }
+  
+ .thumbnail_img img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+  .all_search_res_box{
+    border: 1px solid #817979;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 8px 30px 30px;
+  }
+  .discription{
+    text-align: left;
+  }
+  .heading1{
+    text-align: center;
+  }
+  .pageNo_box{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .pageNo_box span:hover {
+    text-decoration: underline;
+  }
+  .related_search{
+    margin-top: 15px;
+  }
+  .related_search p {
+      font-size: 16px;
+      font-weight: 500;
+  }
+  .related_all_search_box{
+    width: 200px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    font-size: 15px;
+  }
