@@ -1,7 +1,9 @@
 .thumbnail_container{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: grid;
+  align-items: center;
+  margin-bottom: 20px;
+  grid-template-columns: 20% 70%;
+  justify-content: space-around;
 }
 .thumbnail_img img {
     border: 1px solid #ddd;
@@ -18,17 +20,19 @@
   .all_search_res_box{
     border: 1px solid #817979;
     max-width: 650px;
-    margin: 20px auto;
+    margin: 1px auto;
     padding: 8px 30px 30px;
+    min-height: 500px;
   }
   .discription{
     text-align: left;
   }
   .heading1{
     text-align: center;
+    font-weight: 600;
   }
   .pageNo_box{
-    width: 300px;
+    max-width: 300px;
     display: flex;
     justify-content: space-between;
   }
@@ -43,9 +47,59 @@
       font-weight: 500;
   }
   .related_all_search_box{
-    width: 200px;
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 10px;
     font-size: 15px;
   }
+  .related_all_search_box div:hover {
+    color : blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .all_thumbnail{
+    margin-top: 20px;
+  }
+  .sticky_header{
+    background: #f8f5f5;
+    position: sticky;
+    top: 0px;
+    padding: 10px;
+    font-weight: 400;
+  }
+  .back{
+    cursor: pointer;
+    font-weight: 500;
+  }
+  /* ///// */
+  .Page_numbers , .prev, .next{
+    cursor: pointer;
+  }
+  .loder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0px;
+  }
+  .seemore{
+    font-size: 12px;
+    color: gray;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 600px) {
+    .thumbnail_container{
+      grid-template-columns: 30% 60%;
+      grid-column-gap: 30px;      
+  }
+  .thumbnail_img img {
+  
+    width: 100px;
+    height: 100px;
+  }
+  .discription{
+    font-size: 14px;
+  }
+  .img_title {
+    font-weight: 500;
+  }
+}

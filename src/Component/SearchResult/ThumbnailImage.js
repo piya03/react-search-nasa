@@ -1,22 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
-const ThumbnailImage = () => {
+const ThumbnailImage = ({ each }) => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <div className="thumbnail_container">
       <div className="thumbnail_img">
-        <a
-          target="_blank"
-          href="https://media-exp1.licdn.com/dms/image/C561BAQHrxN7ELDqjRg/company-background_10000/0/1553194455335?e=2159024400&v=beta&t=vBIjSWrhaL6osNLlbRmeGaq0atQPIAndFs_TsMZYgQM"
-        >
-          <img
-            src="https://media-exp1.licdn.com/dms/image/C561BAQHrxN7ELDqjRg/company-background_10000/0/1553194455335?e=2159024400&v=beta&t=vBIjSWrhaL6osNLlbRmeGaq0atQPIAndFs_TsMZYgQM"
-            alt=""
-          />
+        <a target="_blank" rel="nasa_img" href={each?.links?.[0]?.href}>
+          <img src={each?.links?.[0]?.href} alt="" />
         </a>
       </div>
       <div className="discription">
-        <p>image title</p>
-        <p>Date created</p>
+        <p className="img_title">{each?.data?.[0]?.title}</p>
+
+        <div>
+          {!showMore &&
+          each?.data?.[0]?.description &&
+          each?.data?.[0]?.description?.length > 50 ? (
+            <p>
+              {" "}
+              {each?.data?.[0]?.description.slice(0, 50)}{" "}
+              <span className="seemore" onClick={() => setShowMore(true)}>
+                ...see more
+              </span>{" "}
+            </p>
+          ) : (
+            <div>{!showMore && <p>{each?.data?.[0]?.description}</p>} </div>
+          )}
+          {showMore && <p>{each?.data?.[0]?.description}</p>}
+        </div>
       </div>
     </div>
   );

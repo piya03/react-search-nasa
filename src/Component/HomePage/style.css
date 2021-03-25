@@ -1,20 +1,21 @@
 .container{
     border: 1px solid #817979;
     max-width: 650px;
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 8px 30px 30px;
     text-align: center;
+    min-height: 500px;
 }
 .search_container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .heading_first{
     font-weight: 500;
+    font-weight: 600;
 }
-.input_search {
 
-}
 .input_search input{
     height: 35px;
     width: 200px;
@@ -26,6 +27,7 @@
     width: 90px;
     font-weight: 500;
    font-size: 16px;
+   cursor: pointer;
 
 }
 .today_pic{
@@ -43,4 +45,29 @@
     grid-gap: 10px;
     font-size: 14px;
     font-weight: 400;
+}
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .search_container{
+      flex-direction: column-reverse;
+    }
+    .input_search{
+        display: flex;
+        margin-bottom: 10px;
+        flex-direction: column;
+    }
+    .input_search button {
+        margin-top: 10px;
+        margin-left: 0;
+        width: 100%;
+      
+    
+    }
+    
 }
