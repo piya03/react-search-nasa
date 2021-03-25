@@ -39,7 +39,7 @@ const HomePage = ({ loading, today_info, searchVal, setSearchVal }) => {
               </div>
             </div>
             <div className="today_pic">
-              <img src={today_info?.hdurl} alt="" />
+              <img src={today_info?.url} alt="" />
             </div>
             <div className="hompage_bottom">
               <div>{today_info?.explanation}</div>
