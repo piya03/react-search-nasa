@@ -35,7 +35,7 @@ mpm start
 - Data will persist after reload the page
 - Back functionality
 - Pagination
-- related search optinon less than 10
+- related search options less than 10
 - Mobile responsive
 
 

@@ -60,7 +60,7 @@ const ShowSearchResult = ({
                           onClick={() => {
                             setSearchVal(each?.trim());
                             history.push(
-                              `/search?q=${each?.trim().replace(" ", "")}`
+                              `/search?q=${encodeURIComponent(each?.trim())}`
                             );
                           }}
                         >

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "./style.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-const HomePage = ({ loading, today_info, searchVal, setSearchVal }) => {
+const HomePage = ({
+  loading,
+  today_info,
+  searchVal,
+  setSearchVal,
+  setPage,
+}) => {
   const history = useHistory();
   function goToSearchPage(val) {
-    return history.push(`/search?q=${val?.trim()?.replace(" ", "")}`);
+    return history.push(`/search?q=${encodeURIComponent(val?.trim())}`);
   }
+  useEffect(() => {
+    setPage(1);
+  }, []);
   return (
     <div>
       <div className="container">

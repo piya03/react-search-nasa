@@ -60,6 +60,7 @@ function App() {
                 loading={loading}
                 searchVal={searchVal}
                 setSearchVal={setSearchVal}
+                setPage={setPage}
               />
             );
           }}
